@@ -30,6 +30,7 @@ await scaffold({
     email,
     login,
     user: user.login,
+    npmignore: '.npmignore',
   },
 });
 
