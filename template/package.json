@@ -1,0 +1,44 @@
+{
+  "name": "{{name}}",
+  "version": "0.0.0",
+  "decription": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "{{author}} <{{email}}>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{login}}/{{name}}.git"
+  },
+  "homepage": "https://github.com/{{login}}/{{name}}#readme",
+  "bugs": {
+    "url": "https://github.com/{{login}}/{{name}}/issues"
+  },
+  "scripts": {
+    "clean": "rimraf coverage docs lib",
+    "lint": "eslint .",
+    "pretest": "tsc --inlineSourceMap",
+    "test": "c8 node --test",
+    "posttest": "npm run ts",
+    "docs": "typedoc",
+    "ts": "tsc",
+    "build": "npm run test && npm run lint && npm run docs && npm pack --dry-run"
+  },
+  "devDependencies": {
+    "c8": "10.1.2",
+    "eslint-plugin-jsdoc": "50.0.0",
+    "eslint-plugin-markdown": "5.1.0",
+    "rimraf": "6.0.1",
+    "typedoc": "0.26.5",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@cto.af/eslint-config": "4.1.5",
+    "typescript-eslint": "8.0.1"
+  },
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,12 @@
+.c8rc
+.editorconfig
+.gitattributes
+.github/
+.ncurc
+coverage/
+docs/
+eslint.config.js
+src/
+test/
+tsconfig.json
+typedoc.config.cjs
