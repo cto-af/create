@@ -27,6 +27,7 @@ await scaffold({
   templates,
   data: {
     author,
+    base,
     email,
     login,
     user: user.login,
