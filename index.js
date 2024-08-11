@@ -32,6 +32,8 @@ await scaffold({
     login,
     user: user.login,
     npmignore: '.npmignore',
+    gitignore: '.gitignore',
+    gitattributes: '.gitattributes',
   },
 });
 
