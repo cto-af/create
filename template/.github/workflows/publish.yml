@@ -21,9 +21,9 @@ jobs:
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: $\{{ secrets.GITHUB_TOKEN }}
           publish_dir: docs
           publish_branch: gh-pages
       - run: npm publish --access public --provenance
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: $\{{ secrets.NPM_TOKEN }}

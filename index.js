@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 
 import {$} from 'execa';
 import {fileURLToPath} from 'node:url';
