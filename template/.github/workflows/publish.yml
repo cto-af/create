@@ -19,7 +19,8 @@ jobs:
       - run: pnpm i -r
       - run: npm run build
       - run: npm pkg delete devDependencies
-      - run: pnpm i
+      - name: Rebuild pnpm-lock.yaml
+        run: pnpm i --no-frozen-lockfile
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v4
         with:
