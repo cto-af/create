@@ -2,7 +2,7 @@
   "name": "{{name}}",
   "version": "0.0.0",
   "decription": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "type": "module",
   "keywords": [],
   "author": "{{author}} <{{email}}>",
@@ -30,14 +30,14 @@
     "eslint-plugin-jsdoc": "50.2.2",
     "eslint-plugin-markdown": "5.1.0",
     "rimraf": "6.0.1",
-    "typedoc": "0.26.6",
+    "typedoc": "0.26.7",
     "typescript": "5.5.4"
   },
   "dependencies": {
     "@cto.af/eslint-config": "4.1.6",
     "typescript-eslint": "8.4.0"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": ">=18"
   }
