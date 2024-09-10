@@ -18,10 +18,11 @@ const {
   ...user
 } = JSON.parse(ujson);
 
-const login = org ? org.slice(1).replaceAll('.', '_') : user.login;
+const login = org ? org.slice(1).replaceAll('.', '-') : user.login;
 const templates = [fileURLToPath(new URL('./template', import.meta.url))];
 
 await scaffold({
+  base,
   name,
   templates,
   data: {
