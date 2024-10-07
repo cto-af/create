@@ -15,9 +15,7 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm pkg delete devDependencies
-      - name: Rebuild pnpm-lock.yaml
-        run: pnpm i --no-frozen-lockfile --lockfile-only
+      - run: npm pkg delete devDependencies scripts
       - run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
