@@ -44,3 +44,4 @@ await $(v)`git init .`;
 await $(v)`git add .`;
 await $(v)`git ci -m ${'Initial checkin'}`;
 await $(v)`npm run build`;
+await $(v)`gh secret set NPM_TOKEN`;
