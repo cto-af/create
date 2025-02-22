@@ -12,17 +12,23 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [18.x, 20.x, 22.x, 23.x]
         platform: [ubuntu-latest]
 
     runs-on: $\{{ matrix.platform }}
 
     steps:
+      - name: Check secrets
+        env:
+          CODECOV_TOKEN: $\{{ secrets.CODECOV_TOKEN }}
+        if: ${{ env.CODECOV_TOKEN == '' }}
+        run: |
+          echo the secret "CODECOV_TOKEN" is not available
       - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Install pnpm
-        run: corepack enable
+        uses: pnpm/action-setup@v4
       - name: Use Node.js $\{{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
@@ -33,6 +39,6 @@ jobs:
       - name: Test $\{{ matrix.node-version }} $\{{ matrix.platform }}
         run: npm run build
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: $\{{ secrets.CODECOV_TOKEN }}

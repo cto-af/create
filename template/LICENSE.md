@@ -1,4 +1,4 @@
-Copyright® 2024 The {{name}} Authors and Contributors
+Copyright® 2025 The {{name}} Authors and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
