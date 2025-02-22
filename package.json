@@ -34,11 +34,6 @@
     "npm-check-updates": "17.1.14",
     "typescript-eslint": "8.24.1"
   },
-  "pnpm": {
-    "overrides": {
-      "micromatch": "4.0.8"
-    }
-  },
   "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
