@@ -8,6 +8,7 @@ import {Scaffold as scaffold} from 'simple-scaffold';
 const cwd = process.cwd();
 const base = path.basename(cwd);
 const parent = path.basename(path.dirname(cwd));
+const args = process.argv.slice(2);
 
 const org = parent.startsWith('@') ? parent : '';
 const name = org ? `${parent}/${base}` : base;
@@ -31,17 +32,21 @@ await scaffold({
     email,
     login,
     user: user.login,
-    npmignore: '.npmignore',
     gitignore: '.gitignore',
     gitattributes: '.gitattributes',
   },
 });
 
-const v = {verbose: 'full'};
-await $(v)`ncu -u`;
-await $(v)`pnpm install`;
-await $(v)`git init .`;
-await $(v)`git add .`;
-await $(v)`git ci -m ${'Initial checkin'}`;
-await $(v)`npm run build`;
-await $(v)`gh secret set NPM_TOKEN`;
+if (!args.includes('--noexec')) {
+  const v = {verbose: 'full'};
+  await $(v)`ncu -u`;
+  await $(v)`pnpm install`;
+  await $(v)`npm run build`;
+  if (!args.includes('--nogit')) {
+    await $(v)`git init .`;
+    await $(v)`git add .`;
+    await $(v)`git ci -m ${'Initial checkin'}`;
+    await $(v)`gh secret set NPM_TOKEN`;
+    await $(v)`gh secret set CODECOV_TOKEN`;
+  }
+}

@@ -21,7 +21,9 @@
     "url": "https://github.com/cto-af/create/issues"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec",
+    "build": "npm run lint && npm run test"
   },
   "dependencies": {
     "execa": "9.5.2",
