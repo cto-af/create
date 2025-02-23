@@ -31,8 +31,8 @@
     "simple-scaffold": "2.3.2"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "5.1.9",
-    "eslint": "9.20.1",
+    "@cto.af/eslint-config": "5.1.11",
+    "eslint": "9.21.0",
     "npm-check-updates": "17.1.14",
     "typescript-eslint": "8.24.1"
   },

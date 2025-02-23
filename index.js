@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 import {$} from 'execa';
 import {fileURLToPath} from 'node:url';
@@ -46,7 +47,9 @@ if (!args.includes('--noexec')) {
     await $(v)`git init .`;
     await $(v)`git add .`;
     await $(v)`git ci -m ${'Initial checkin'}`;
-    await $(v)`gh secret set NPM_TOKEN`;
-    await $(v)`gh secret set CODECOV_TOKEN`;
+    console.log('---------\nNEXT STEPS\n---------');
+    console.log(`gh repo create ${login}/${base} --public --source=. --remote=upstream --push`);
+    console.log('gh secret set NPM_TOKEN');
+    console.log('gh secret set CODECOV_TOKEN');
   }
 }
