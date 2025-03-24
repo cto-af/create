@@ -31,12 +31,12 @@
     "simple-scaffold": "2.3.2"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "5.1.11",
-    "eslint": "9.21.0",
-    "npm-check-updates": "17.1.14",
-    "typescript-eslint": "8.24.1"
+    "@cto.af/eslint-config": "5.1.14",
+    "eslint": "9.23.0",
+    "npm-check-updates": "17.1.16",
+    "typescript-eslint": "8.28.0"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.6.5",
   "engines": {
     "node": ">=20"
   }
