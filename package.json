@@ -27,16 +27,16 @@
   },
   "dependencies": {
     "execa": "9.5.2",
-    "glob": "11.0.1",
+    "glob": "11.0.2",
     "simple-scaffold": "2.3.2"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "5.1.14",
-    "eslint": "9.23.0",
-    "npm-check-updates": "17.1.16",
-    "typescript-eslint": "8.28.0"
+    "@cto.af/eslint-config": "6.0.0",
+    "eslint": "9.25.1",
+    "npm-check-updates": "18.0.1",
+    "typescript-eslint": "8.31.1"
   },
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": ">=20"
   }
