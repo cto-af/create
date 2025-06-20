@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec",
+    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec && pnpm i && npm run test && npm run lint",
     "build": "npm run lint && npm run test"
   },
   "dependencies": {

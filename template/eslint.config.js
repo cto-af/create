@@ -8,9 +8,7 @@ import ts from '@cto.af/eslint-config/ts.js';
 export default [
   {
     ignores: [
-      '**/*.d.ts',
       'lib/**',
-      'docs/**',
     ],
   },
   ...es6,
