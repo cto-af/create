@@ -1,0 +1,35 @@
+---
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        # This script only runs lint, so don't bother with other versions
+        node-version: [24]
+        platform: [ubuntu-latest]
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Dependencies
+        run: pnpm install
+      - name: Test ${{ matrix.node-version }} ${{ matrix.platform }}
+        run: npm run lint

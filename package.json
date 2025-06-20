@@ -22,21 +22,21 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec",
+    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec && pnpm i && npm run test && npm run lint",
     "build": "npm run lint && npm run test"
   },
   "dependencies": {
-    "execa": "9.5.2",
-    "glob": "11.0.2",
-    "simple-scaffold": "2.3.2"
+    "execa": "9.6.0",
+    "glob": "11.0.3",
+    "simple-scaffold": "2.3.3"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.0.1",
-    "eslint": "9.25.1",
+    "@cto.af/eslint-config": "6.0.9",
+    "eslint": "9.29.0",
     "npm-check-updates": "18.0.1",
-    "typescript-eslint": "8.31.1"
+    "typescript-eslint": "8.34.1"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": ">=20"
   }

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable n/no-top-level-await */
 /* eslint-disable no-console */
 
 import {$} from 'execa';
