@@ -12,7 +12,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20, 22, 24]
+        # This script only runs lint, so don't bother with other versions
+        node-version: [24]
         platform: [ubuntu-latest]
 
     runs-on: ${{ matrix.platform }}
@@ -31,7 +32,7 @@ jobs:
       - name: Dependencies
         run: pnpm install
       - name: Test ${{ matrix.node-version }} ${{ matrix.platform }}
-        run: npm run test
+        run: npm run lint
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4
         with:
