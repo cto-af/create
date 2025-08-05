@@ -21,8 +21,10 @@
     "url": "https://github.com/cto-af/create/issues"
   },
   "scripts": {
+    "clean": "rimraf template/pnpm-lock.yaml template/node_modules test",
     "lint": "eslint .",
-    "test": "rm -rf test && mkdir test && cd test && ../index.js --noexec && pnpm i && npm run test && npm run lint",
+    "pretest": "npm run clean",
+    "test": "mkdir test && cd test && ../index.js --noexec && pnpm i && npm run test && npm run lint",
     "build": "npm run lint && npm run test"
   },
   "dependencies": {
@@ -31,12 +33,13 @@
     "simple-scaffold": "2.3.3"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.0.9",
-    "eslint": "9.29.0",
-    "npm-check-updates": "18.0.1",
-    "typescript-eslint": "8.34.1"
+    "@cto.af/eslint-config": "6.0.13",
+    "eslint": "9.32.0",
+    "npm-check-updates": "18.0.2",
+    "rimraf": "6.0.1",
+    "typescript-eslint": "8.39.0"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=20"
   }
