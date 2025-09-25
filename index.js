@@ -50,7 +50,6 @@ if (!args.includes('--noexec')) {
     await $(v)`git ci -m ${'Initial checkin'}`;
     console.log('---------\nNEXT STEPS\n---------');
     console.log(`gh repo create ${login}/${base} --public --source=. --remote=upstream --push`);
-    console.log('gh secret set NPM_TOKEN');
     console.log('gh secret set CODECOV_TOKEN');
   }
 }
