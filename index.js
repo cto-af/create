@@ -51,5 +51,6 @@ if (!args.includes('--noexec')) {
     console.log('---------\nNEXT STEPS\n---------');
     console.log(`gh repo create ${login}/${base} --public --source=. --remote=upstream --push`);
     console.log('gh secret set CODECOV_TOKEN');
+    console.log(`Set up "publish" environment at https://www.npmjs.com/package/${name}`);
   }
 }
