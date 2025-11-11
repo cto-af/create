@@ -2,7 +2,7 @@
   "name": "{{name}}",
   "version": "0.0.0",
   "decription": "",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "files": [
     "lib/*"
   ],
@@ -27,18 +27,18 @@
     "build": "npm run ts && npm run test && npm run lint && npm run docs && npm pack --dry-run"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.0.17",
-    "@eslint/markdown": "7.5.0",
-    "eslint": "9.38.0",
-    "eslint-plugin-jsdoc": "61.1.7",
-    "tsdown": "0.15.9",
+    "@cto.af/eslint-config": "6.1.0",
+    "@eslint/markdown": "7.5.1",
+    "eslint": "9.39.1",
+    "eslint-plugin-jsdoc": "61.1.12",
+    "tsdown": "0.16.2",
     "typedoc": "0.28.14",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.2",
-    "vitest": "4.0.3",
-    "@vitest/coverage-v8": "4.0.3"
+    "typescript-eslint": "8.46.4",
+    "vitest": "4.0.8",
+    "@vitest/coverage-v8": "4.0.8"
   },
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.21.0",
   "engines": {
     "node": ">=20"
   }
