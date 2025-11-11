@@ -33,13 +33,13 @@
     "simple-scaffold": "2.3.3"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.0.17",
-    "eslint": "9.38.0",
-    "npm-check-updates": "19.1.1",
-    "rimraf": "6.0.1",
-    "typescript-eslint": "8.46.2"
+    "@cto.af/eslint-config": "6.1.0",
+    "eslint": "9.39.1",
+    "npm-check-updates": "19.1.2",
+    "rimraf": "6.1.0",
+    "typescript-eslint": "8.46.4"
   },
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.21.0",
   "engines": {
     "node": ">=20"
   }
