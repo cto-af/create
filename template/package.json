@@ -27,18 +27,18 @@
     "build": "npm run ts && npm run test && npm run lint && npm run docs && npm pack --dry-run"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "6.2.4",
+    "@cto.af/eslint-config": "6.2.5",
     "@eslint/markdown": "7.5.1",
-    "eslint": "10.0.2",
+    "eslint": "10.0.3",
     "eslint-plugin-jsdoc": "62.7.1",
-    "tsdown": "0.20.3",
+    "tsdown": "0.21.0",
     "typedoc": "0.28.17",
     "typescript": "5.9.3",
     "typescript-eslint": "8.56.1",
     "vitest": "4.0.18",
     "@vitest/coverage-v8": "4.0.18"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.31.0",
   "engines": {
     "node": ">=20"
   }
