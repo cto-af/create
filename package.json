@@ -2,7 +2,15 @@
   "name": "@cto.af/create",
   "version": "1.0.5",
   "decription": "Create a @cto.af-style project",
-  "bin": "index.js",
+  "bin": {
+    "create": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template/",
+    "!template/node_modules",
+    "!template/pnpm-lock.yaml"
+  ],
   "type": "module",
   "keywords": [
     "scaffold,",
