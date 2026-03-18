@@ -1,6 +1,0 @@
-/.gitattributes
-/.github/
-/eslint.config.js
-/test/*
-/template/pnpm-lock.yaml
-/template/node-modules
