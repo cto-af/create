@@ -1,6 +1,6 @@
 {
   "name": "@cto.af/create",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "decription": "Create a @cto.af-style project",
   "bin": "index.js",
   "type": "module",
